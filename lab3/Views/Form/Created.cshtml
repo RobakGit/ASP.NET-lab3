@@ -1,0 +1,16 @@
+﻿@model lab3.Models.FormModel
+@{ ViewData["Title"] = "Form-Created"; }
+
+
+@{ 
+    void RenderName(string name)
+    {
+        <p>Name: <strong>@name</strong></p>
+    }
+
+
+    for(int i = 1; i <= Model.Repetition; i++)
+    {
+        RenderName(Model.Name);
+    }
+}
